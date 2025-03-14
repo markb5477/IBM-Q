@@ -1,0 +1,34 @@
+# Core IBM Quantum packages
+qiskit
+qiskit-ibm-provider
+qiskit-ibm-runtime
+
+# Additional Qiskit components
+qiskit-aer          # High-performance simulators
+qiskit-terra        # Core foundations
+qiskit-nature       # For quantum chemistry and physics simulations
+qiskit-optimization # For optimization problems
+qiskit-machine-learning # For quantum machine learning
+qiskit-experiments  # For running quantum experiments
+qiskit-finance      # For financial applications
+
+# Visualization and UI
+qiskit[visualization]
+matplotlib
+ipywidgets         # For interactive widgets in notebooks
+pylatexenc         # For LaTeX rendering
+seaborn            # Enhanced visualization
+
+# Development tools
+jupyter            # For Jupyter notebooks
+notebook           # Traditional Jupyter interface
+jupyterlab         # Enhanced Jupyter interface
+pytest             # For testing quantum programs
+pylint             # Code quality checker
+
+# Additional utilities
+numpy              # Numerical computing
+scipy              # Scientific computing
+pandas             # Data analysis
+networkx           # Graph algorithms
+tqdm               # Progress bars for long-running processes
