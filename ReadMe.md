@@ -8,7 +8,7 @@ Get python
 ~ pip install qiskit-ibm-runtime
 ~ pip install qiskit[visualization]
 ~ pip install qiskit_aer
-
+~ pip install qiskit_experiments
 
 * Run the venv
 Desktop\IBMQ\Scripts\activate

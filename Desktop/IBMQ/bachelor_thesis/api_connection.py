@@ -8,6 +8,7 @@ class QiskitService:
         self.service = None
         self._load_api_key()
         self._connect_service()
+        self.backend = None
     
     def _load_api_key(self):
         dotenv.load_dotenv(self.api_key_path)
@@ -22,7 +23,7 @@ class QiskitService:
     def get_active_account(self):
         return self.service.active_account()
     
-    def get_backends(self, min_qubits=10):
+    def get_backends(self, min_qubits=13):
         return self.service.backends(min_num_qubits=min_qubits)
     
     def get_least_busy_backend(self):
@@ -36,3 +37,16 @@ class QiskitService:
     
     def get_usage(self):
         return self.service.usage()
+    
+    def connect_to_backend(self, backend_name = None):
+        if backend_name == None:
+            print(f"Connected to least busy backend")
+            self.get_least_busy_backend()
+        else:
+            try:
+                name = backend_name
+                self.backend = self.service.backends(name = backend_name)
+                print(f"Connected to backend: {name}")
+                return self.backend 
+            except Exception as e:
+                print(f"Error connecting to backend {backend_name}: {e}")
