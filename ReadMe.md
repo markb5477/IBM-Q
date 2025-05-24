@@ -1,5 +1,12 @@
-# Project Setup
+# The code for my bachelors thesis on quantum error correction
+* I benchmark two error correcting codes - Steane and Three-Qubit Bit-Flip code - on IBM QPU hardware. 
 
+
+
+
+
+
+# Running the venv
 * setup the venv
 Get python
 ~ python3 -m venv Desktop\IBMQ 
