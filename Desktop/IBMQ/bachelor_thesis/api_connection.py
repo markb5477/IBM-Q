@@ -39,14 +39,16 @@ class QiskitService:
         return self.service.usage()
     
     def connect_to_backend(self, backend_name = None):
-        if backend_name == None:
-            print(f"Connected to least busy backend")
-            self.get_least_busy_backend()
+        if backend_name is None:
+            self.backend = self.service.least_busy()
+            print(f"Connected to least busy backend: {self.backend.name}")
+            return self.backend
         else:
             try:
-                name = backend_name
-                self.backend = self.service.backends(name = backend_name)
-                print(f"Connected to backend: {name}")
+                # Change backends() to backend() to get a single backend object, not a list
+                self.backend = self.service.backend(name=backend_name)
+                print(f"Connected to backend: {backend_name}")
                 return self.backend 
             except Exception as e:
                 print(f"Error connecting to backend {backend_name}: {e}")
+                return None

@@ -4,3 +4,5 @@ Desktop/IBMQ/include/
 Desktop/IBMQ/Lib/
 Desktop/IBMQ/Scripts/
 Desktop/IBMQ/share/
+__pycache__/
+.ipynb_checkpoints/
